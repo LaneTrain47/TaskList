@@ -7,3 +7,34 @@ main>.container {
     height: 3rem;
     margin: 1em;
 }
+
+.color-btnCreateTask {
+    background-color:green;
+    color: white
+}
+
+.color-btnCreateTask:hover {
+    background-color:white;
+    color: green
+}
+
+.color-btnClearTasks {
+    background-color: #f7df1e;
+    color: black;
+}
+
+.color-btnClearTasks:hover {
+    background-color: black;
+    color: #f7df1e;
+}
+
+.color-btnClearFilter {
+    background-color: red;
+    color: white;
+}
+
+.color-btnClearFilter:hover {
+    background-color: white;
+    color: red;
+}
+
