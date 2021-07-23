@@ -21,11 +21,8 @@
         <div class="container-fluid">
             <img src="/img/AppIcon_small.png">
             <a class="navbar-brand" href="index.html">Task List</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
-             </div>
+            </div>
         </div>
     </nav>
     <main class="flex-shrink-0">
@@ -65,10 +62,39 @@
                             </thead>
                             <tbody id="taskBody"></tbody>
                         </table>
-
+                        <div class="modal" id="newTaskItem" style="display: none;" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content border-dark">
+                                    <div class="modal-header text-center">
+                                        <h4 class="modal-title">Add New Task</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form onsubmit="CreateTask(this)">
+                                            <input type="hidden" name="ModalCreate" value="true">
+                                            <div class="form-group">
+                                                <label class="fw-bold" for="Title">Title:</label>
+                                                <input type="text" class="form-control border-dark" name="Title"
+                                                    id="Title" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="fw-bold" for="DueDAte">Due Date:</label>
+                                                <input type="date" class="form-control border-dark" name="DueDate"
+                                                    id="DueDate">
+                                                <button type="submit"
+                                                    class="btn btn-dark btn-outline-warning btn-wide">Submit</button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-dark btn-outline-warning"
+                                            data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
     </main>
 
 
