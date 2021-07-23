@@ -1,3 +1,3 @@
-//To Do
+PrepareLocalStorage()
 
 //
