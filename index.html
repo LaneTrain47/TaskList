@@ -25,80 +25,59 @@
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/app.html">The App</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/code.html">The Code</a>
-                    </li>
-                </ul>
-            </div>
+             </div>
         </div>
     </nav>
     <main class="flex-shrink-0">
         <div class="container">
             <p class="lead"></p>
             <div class="row">
-                <div class="col-lg mt-4">
-                    <h1 class="display-5 fw-bold lh-1 mb-5 text-lg-center">Task List</h1>
-                </div>
-                <div class="row">
-                    <div class="col-5">
-                        <div class="row">
-                            <h1 class="mb-3 mt-4">WEB STORAGE</h1>
-                            <p>What do you want? What do you want?
-                                I want rock'n'roll, all right!
-                                Long live rock'n'roll</p>
-
-                            <p>Rock of ages, rock of ages
-                                Still rollin', keep a-rollin'
-                                Rock of ages, rock of ages
-                                Still rollin', rock'n'rollin'</p>
-
-                            <p>We got the power, got the glory
-                                Just say you need it and if you need it
-                                Say yeah!</p>
+                <div class="col">
+                    <h1 class="fw-bold lh-1 mb-5 mt-3 text-center">My Tasks</h1>
+                    <hr class="line color">
+                    <div class="row">
+                        <div class="col ms-5 mt-4">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#newTaskItem"
+                                class="btn btn-default btn-block btn-outline-dark fw-bold color-btnCreateTask"
+                                id="btnCreateTask">Create Task</button>
+                        </div>
+                        <div class="col ms-5 mt-4">
+                            <button type="button" onclick="ClearTasks()"
+                                class="btn btn-default btn-block btn-outline-dark fw-bold color-btnClearTasks"
+                                id="btnClearTasks">Clear Tasks</button>
+                        </div>
+                        <div class="col ms-5 mt-4">
+                            <button type="button" onclick="FilterAll()"
+                                class="btn btn-default btn-block btn-outline-dark fw-bold color-btnClearFilter"
+                                id="btnClearFilter">Clear Filter</button>
                         </div>
                     </div>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered border-dark mt-4" id="eventData">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th class="d-none"></th>
+                                    <th>Title</th>
+                                    <th>Created</th>
+                                    <th>Due Date</th>
+                                    <th> </th>
+                                </tr>
+                            </thead>
+                            <tbody id="taskBody"></tbody>
+                        </table>
 
-                    <div class="col-2"></div>
-                    <div class="col-5">
-                        <div class="row">
-                            <h1 class="mb-3 mt-4">JS OBJECTS</h1>
-                            <p>Back in black I hit the sack
-                                I've been too long I'm glad to be back
-                                Yes I am
-                                Let loose from the noose
-                                That's kept me hanging about
-                                I kept looking at the sky cause it's gettin' me high
-                                Forget the hearse cause I'll never die</p>
-
-                            <p>I got nine lives cat's eyes
-                                Abusin' every one of them and runnin' wild
-                                Cause I'm back
-                                Yes I'm back
-                                Well I'm back
-                                Yes I'm back
-                                Well I'm back back
-                                Well I'm back in black
-                                Yes I'm back in black</p>
-                        </div>
-                        <div class="col">
-                            <div class="row">
-                                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                                    <a type="button" class="btn background-color border-dark mt-4 mb-4"
-                                        href="app.html">Try It
-                                        Out!</a></div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
     </main>
+
+
+
+
+
+
+
+
     <footer class="footer mt-auto py-3 bg-dark">
         <div class="container-fluid text-center text-light">
             <div class="row row-cols-1 row-cols-lg-3">
